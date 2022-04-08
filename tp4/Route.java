@@ -14,13 +14,13 @@ public class Route
     {
         Scanner input = new Scanner(System.in);
         
-        System.out.println("enter number:");
+        System.out.print("enter number: ");
         this.number = input.nextInt();
 
-        System.out.println("enter num_kilom: ");
+        System.out.print("enter num_kilom: ");
         this.num_kilom = input.nextInt();
 
-        System.out.println("enter categorie: ");
+        System.out.print("enter categorie: ");
         input.nextLine();
 
         String foo = input.nextLine();
@@ -40,7 +40,7 @@ public class Route
             this.categorie = categories.RouteNationale;
             break;
         }
-        System.out.println("enter state: ");
+        System.out.print("enter state: ");
         foo = input.nextLine();
 
         switch(foo)
@@ -59,8 +59,6 @@ public class Route
             this.state = states.Moyen;
             break;
         }
-
-
 
     }
     public void affiche()

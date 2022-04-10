@@ -203,29 +203,23 @@ public class Date {
     public static int compareTo(Date date1 ,Date date2)
     {
         int sum1,sum2;
-        if (date1.get_month() == months.february) {
-            sum1 = date1.get_year() * 365 
-            + Date.get_month_number(date1) * 29
-            + date1.get_day();
-        }
-        else
-        {
-            sum1 = date1.get_year() * 365 
+
+        sum1 = date1.get_year() * 365 
             + Date.get_month_number(date1) * 30
             + date1.get_day();
+
+        sum2 = date2.get_year() * 365 
+            + Date.get_month_number(date2) * 30
+            + date2.get_day();
+
+        if (date1.get_month() == months.february) {
+            sum1--;
         }
 
         if (date2.get_month() == months.february) {
-            sum2 = date2.get_year() * 365 
-            + Date.get_month_number(date2) * 29
-            + date2.get_day();
+            sum2--;
         }
-        else
-        {
-            sum2 = date2.get_year() * 365 
-            + Date.get_month_number(date2) * 30
-            + date2.get_day();
-        }
+
 
 
         if (sum1 > sum2)
